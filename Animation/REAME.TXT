@@ -1,0 +1,2 @@
+Challenges:
+#2- Click anywhere on the panel and the UFO will move towards the point

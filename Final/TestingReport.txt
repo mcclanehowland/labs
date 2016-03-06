@@ -1,0 +1,30 @@
+Nick Lindbloom-Airey:
+
+I do not like the choppy movement of the spaceship when you press the up and down keys. 
+If you could make this much smoother I would enjoy the game more. Also, you should 
+decrease the number of stars in the background because it is very distracting to have 
+2000 stars that make the screen look funny. You should also improve the shooting 
+mechanic. It only shoots sometimes unless you hold down the spacebar. 
+
+Response:
+
+I agree with all the things Nick said. I will make a boolean to move the ship up and
+ down in the animate class so the movement is not choppy. I will also decrease the 
+ number of stars in the background from 2000 to 1000 so that the background will 
+ be less distracting. I have also fixed the shooting mechanic to shoot as soon as 
+ the spacebar is pressed, so that there is no delay. 
+
+My Mother: 
+
+The rectangles for enemies are cool, but I think you should use pictures instead
+ of rectangles to make the game look better. Also, the backgrounds look very 
+ similar and I think you should change the colors. Finally, if you made the game
+ have a theme instead of random objects.
+
+Response:
+
+I have replaced the enemies, ship, and boss level with PNG images that are much
+ more interesting than rectangles. I have also created a theme for the game with
+ these images. The theme for the game is now monkeys trying to get a banana. 
+ The monkeys are the enemies and the banana is the spaceship. This will make the
+ game look much more interesting and fun to play. 
