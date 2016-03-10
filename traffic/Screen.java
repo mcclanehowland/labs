@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Screen extends JPanel {
 	
     private ArrayList<Automobile> cars; //main arraylist of cars
+    private Color darkGreen = new Color(9,84,9);
 
 	public Screen() {
         /*roads are positioned at 
@@ -20,7 +21,19 @@ public class Screen extends JPanel {
             (x,470) ?
         */
         cars = new ArrayList<Automobile>();
-        cars.add(new SmallCar(Color.cyan,0,120));
+        //add sports cars
+
+        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
+        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),170));
+        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
+        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),420));
+        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+        //add sedans
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),170));
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),420));
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
 	}
 	
 	public Dimension getPreferredSize() {
@@ -32,7 +45,7 @@ public class Screen extends JPanel {
 		super.paintComponent(g);
 		
 		//draw background
-		g.setColor( Color.white );
+        g.setColor(darkGreen);
 		g.fillRect(0,0,800,600);
 		
 		//draw cars
@@ -45,7 +58,7 @@ public class Screen extends JPanel {
     public void drawRoad(Graphics g,int x,int y) {
         g.setColor(Color.gray);
         g.fillRect(x,y,800,100);
-        g.setColor(Color.yellow);
+        g.setColor(Color.white);
         for(int i = x;i < 800;i += 60) {
             g.fillRect(i,y+45,30,10);
         }

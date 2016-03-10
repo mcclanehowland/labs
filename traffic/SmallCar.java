@@ -2,6 +2,7 @@ import java.awt.Graphics;
 import java.awt.Color;
 
 public class SmallCar extends Automobile {
+
     public SmallCar(Color bodyColor,int x,int y) {
         super(bodyColor,x,y);
         
