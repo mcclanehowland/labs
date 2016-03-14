@@ -23,17 +23,23 @@ public class Screen extends JPanel {
         cars = new ArrayList<Automobile>();
         //add sports cars
 
-        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
-        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),170));
-        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
-        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),420));
-        cars.add(new SmallSportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),170));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),420));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
         //add sedans
         cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
         cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),170));
         cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
         cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),420));
         cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
 	}
 	
 	public Dimension getPreferredSize() {

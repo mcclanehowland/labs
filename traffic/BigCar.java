@@ -4,8 +4,8 @@ import java.awt.Font;
 
 public class BigCar extends Automobile {
 
-    public BigCar() {
-        super(new Color(0,0,250),100,100);
+    public BigCar(Color bodyColor,int x,int y) {
+        super(bodyColor,x,y);
     }
     public void drawFrame(Graphics g) {
         //override larger size frame with windows and lights

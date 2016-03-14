@@ -30,8 +30,8 @@ public class Automobile {
 	}
 	public void drawWheels(Graphics g) {	
 		g.setColor( Color.black );
-		g.fillOval(x+5,y+10, 15, 15);
-		g.fillOval(x+50,y+10, 15, 15);
+		g.fillOval(x+5,(int)(y+height-7.5), 15, 15);
+		g.fillOval(x+50,(int)(y+height-7.5), 15, 15);
 	}
     public void move() {
         x += speed;

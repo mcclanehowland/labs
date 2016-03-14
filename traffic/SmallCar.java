@@ -14,6 +14,6 @@ public class SmallCar extends Automobile {
         //overriding the parent drawMe
         g.setColor(Color.black);
         g.fillOval(x+3,y+9,10,10);
-        g.fillOval(x+20,y+9,10,10);
+        g.fillOval(x+height-10,y+9,10,10);
     }
 }
