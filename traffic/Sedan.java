@@ -4,8 +4,9 @@ import java.awt.Font;
 
 public class Sedan extends MediumCar {
 
-    public Sedan(Color bodyColor,int x,int y) {
+    public Sedan(Color bodyColor,double x,double y) {
         super(bodyColor,x,y);
+        speed = 1+Math.random()*1;
 
     }
     @Override
@@ -13,7 +14,7 @@ public class Sedan extends MediumCar {
         //4 door frame, use super.draw(g) to draw frame and then ddraw four door frame;
         super.drawFrame(g);
         g.setColor(Color.black);
-        g.drawRect(x+20,y,15,20);
-        g.drawRect(x+35,y,15,20);
+        g.drawRect((int)x+20,(int)y,15,20);
+        g.drawRect((int)x+35,(int)y,15,20);
     }
 }

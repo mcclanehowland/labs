@@ -23,23 +23,30 @@ public class Screen extends JPanel {
         cars = new ArrayList<Automobile>();
         //add sports cars
 
-        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
-        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),170));
-        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
-        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),420));
-        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),110));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),160));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),110));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),410));
+        cars.add(new SportsCar(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),460));
         //add sedans
-        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
-        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),170));
-        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
-        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),420));
-        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),110));
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),160));
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),110));
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),410));
+        cars.add(new Sedan(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),460));
 
-        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
-        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
-        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
-        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
-        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),110));
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),160));
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),110));
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),410));
+        cars.add(new SUV(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),460));
+        
+        cars.add(new Truck(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
+        cars.add(new Truck(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),170));
+        cars.add(new Truck(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),120));
+        cars.add(new Truck(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),420));
+        cars.add(new Truck(new Color((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250)),(int)(Math.random()*800),470));
+
 	}
 	
 	public Dimension getPreferredSize() {
@@ -54,10 +61,19 @@ public class Screen extends JPanel {
         g.setColor(darkGreen);
 		g.fillRect(0,0,800,600);
 		
-		//draw cars
+        //off ramps
+        int[] xPoints = {250,350,850,750};
+        int[] yPoints = {400,450,350,250};
+        g.setColor(Color.gray);
+        g.fillPolygon(xPoints,yPoints,xPoints.length);
+        int[] x2Points = {250,350,800,850};
+        int[] y2Points = {200,150,250,350};
+        g.fillPolygon(x2Points,y2Points,xPoints.length);
+
         drawRoad(g,0,100);
         drawRoad(g,0,400);
-        for(Automobile each : cars) {
+		//draw cars
+                for(Automobile each : cars) {
             each.drawMe(g);
         }
 	}
@@ -68,6 +84,7 @@ public class Screen extends JPanel {
         for(int i = x;i < 800;i += 60) {
             g.fillRect(i,y+45,30,10);
         }
+
     }
     public void animate() {
         while(true) {

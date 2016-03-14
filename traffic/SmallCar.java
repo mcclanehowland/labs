@@ -3,7 +3,7 @@ import java.awt.Color;
 
 public class SmallCar extends Automobile {
 
-    public SmallCar(Color bodyColor,int x,int y) {
+    public SmallCar(Color bodyColor,double x,double y) {
         super(bodyColor,x,y);
         
         width = 35;
@@ -13,7 +13,7 @@ public class SmallCar extends Automobile {
     public void drawWheels(Graphics g) {
         //overriding the parent drawMe
         g.setColor(Color.black);
-        g.fillOval(x+3,y+9,10,10);
-        g.fillOval(x+height-10,y+9,10,10);
+        g.fillOval((int)x+3,(int)y+9,10,10);
+        g.fillOval((int)x+height-10,(int)y+9,10,10);
     }
 }

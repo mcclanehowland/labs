@@ -4,18 +4,22 @@ import java.awt.Color;
 public class Automobile {
 
 	public Color bodyColor;
-	public int x = 100;
-	public int y = 100;
+	public double x;
+	public double y;
+    public double Y;
 	public int width;
 	public int height;
-    public int speed = 1;
+    public double speed = 1;
+    private boolean exitUp = false;
+    private boolean exitDown = false;
 	
 	
-	public Automobile(Color bodyColor, int x, int y) {
+	public Automobile(Color bodyColor, double x, double y) {
 
 		this.bodyColor = bodyColor;
 		this.x = x;
 		this.y = y;
+        Y = y;
 		this.width = 70;
 		this.height = 20;
 	}
@@ -26,17 +30,32 @@ public class Automobile {
 	}
 	public void drawFrame(Graphics g) {
 		g.setColor(bodyColor);
-		g.fillRect(x,y,width,height);
+		g.fillRect((int)(x),(int)(y),width,height);
 	}
 	public void drawWheels(Graphics g) {	
 		g.setColor( Color.black );
-		g.fillOval(x+5,(int)(y+height-7.5), 15, 15);
-		g.fillOval(x+50,(int)(y+height-7.5), 15, 15);
+		g.fillOval((int)(x+5),(int)(y+height-7.5), 15, 15);
+		g.fillOval((int)(x+50),(int)(y+height-7.5), 15, 15);
 	}
     public void move() {
         x += speed;
+        if(exitDown) {
+                y -= speed/3.0 ;
+        }
+        if(exitUp) {
+            y += speed/3.0;
+        }
         if(x > 800) {
             x = 0-width;
+            y = Y;
+            exitDown = false;
+            exitUp = false;
+        }
+        if(x > 275 && x < 300 && y > 100 && y < 200 && (int)(Math.random()*1000)%(int)(Math.random()*1000+1)==0) {
+            exitUp = true;
+        }
+        else if(x > 275 && x < 300 && y > 400 && y < 500 && (int)(Math.random()*1000)%(int)(Math.random()*1000+1)==0) {
+            exitDown = true;
         }
     }
 	
