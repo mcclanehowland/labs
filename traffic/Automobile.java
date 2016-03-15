@@ -51,7 +51,7 @@ public class Automobile {
             exitDown = false;
             exitUp = false;
         }
-        if(x > 275 && x < 300 && y > 100 && y < 200 && (int)(Math.random()*1000)%(int)(Math.random()*1000+1)==0) {
+        if(x > 275 && x < 300 && y > 100 && y < 200 && (int)(Math.random()*100)%(int)(Math.random()*100+1)==0) {
             exitUp = true;
         }
         else if(x > 275 && x < 300 && y > 400 && y < 500 && (int)(Math.random()*1000)%(int)(Math.random()*1000+1)==0) {
