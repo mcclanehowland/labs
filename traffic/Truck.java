@@ -15,5 +15,8 @@ public class Truck extends BigCar {
         g.setColor(Color.black);
         g.drawRect((int)x+60,(int)y,18,19);
         g.fillRect((int)x+52,(int)y-9,25,13);
+        g.setColor(Color.yellow);
+        g.fillOval((int)x+75,(int)y,10,10);
+
     }
 }

@@ -15,7 +15,7 @@ public class BigCar extends Automobile {
         g.setColor(Color.black);
         g.fillRect((int)(x+4),(int)(y+4),width/2,height/2);
         g.fillRect((int)x+52,(int)(y+4),width/3,height/2);
-    }
+            }
     public void drawWheels(Graphics g) {
         //more detailed big wheels
         g.setColor(Color.black);

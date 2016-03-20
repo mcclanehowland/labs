@@ -12,6 +12,9 @@ public class SUV extends BigCar {
         g.setColor(Color.black);
         g.drawRect((int)x+30,(int)y+10,20,height-12);
         g.drawRect((int)x+50,(int)y+10,20,height-12);
+        g.setColor(Color.yellow);
+        g.fillOval((int)x+width-5,(int)y+10,10,10);
+
         //4 door frame
     }
 }
